@@ -47,7 +47,27 @@
             ]
             
  ## POST
- 1) To create a New Category say snacks: /setCategory
+ 1) To add a New Product Type say fanta: /setProductType
+   Request:
+           body:{
+                 payload:[
+                     productType:"fanta"
+                 ]
+           }
+           
+   Response: 
+            paylaod:[
+              {
+                categoryId: "000yz",
+                categoryType: "beverage"
+              },
+              {
+                categoryId: "001yz",
+                categoryType: "snacks"
+              }
+            ]
+ 
+ 2) To create a New Category say snacks: /setCategory
    Request:
            body:{
                  payload:[
@@ -69,13 +89,9 @@
             
             
 ## DELETE
-1) To delete an item ( dispensing action ): /deleteItem
+1) To delete an item ( dispensing action ): /deleteItem/?itemId=123yz
       Request:
-           body:{
-                 payload:[
-                     itemId:"123yz"
-                 ]
-           }
+           body:{}
            
       Response: 
              paylaod:[
