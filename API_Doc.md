@@ -8,27 +8,27 @@
    Response: 
             paylaod:[
               {
-                id: "123yz",
+                itemId: "123yz",
                 productType: "coke",
                 priceInDollars: "2"
               },
               {
-                id: "675vr",
+                itemId: "675vr",
                 productType: "water",
                 priceInDollars: "1"
               },
               {
-                id: "323dv",
+                itemId: "323dv",
                 productType: "coke",
                 priceInDollars: "2"
               },
               {
-                id: "098nb",
+                itemId: "098nb",
                 productType: "water",
                 priceInDollars: "1"
               }
             ]
-2) /getInventory/{productType}
+2) /getInventory/{}
    Request:
            body:{}
            
