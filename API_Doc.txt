@@ -10,22 +10,30 @@
               {
                 itemId: "123yz",
                 productType: "coke",
-                priceInDollars: "2"
+                priceInDollars: "2",
+                categoryId: "000yz",
+                categoryType: "beverage"
               },
               {
                 itemId: "675vr",
                 productType: "water",
-                priceInDollars: "1"
+                priceInDollars: "1",
+                categoryId: "000yz",
+                categoryType: "beverage"
               },
               {
                 itemId: "323dv",
                 productType: "coke",
-                priceInDollars: "2"
+                priceInDollars: "2",
+                categoryId: "000yz",
+                categoryType: "beverage"
               },
               {
                 itemId: "098nb",
                 productType: "water",
-                priceInDollars: "1"
+                priceInDollars: "1",
+                categoryId: "000yz",
+                categoryType: "beverage"
               }
             ]
 2) To get all product info of same type: /getInventory/<productType>
@@ -110,4 +118,36 @@
                 productType: "water",
                 priceInDollars: "1"
               }
+            ]
+            
+ ## PUT
+ 1) To update product pricing: /updateProduct
+   Request:
+           body:{
+                 payload:[
+                     productType:"coke"
+                     priceInDollars:"3"
+                 ]
+           }
+           
+   Response: 
+            paylaod:[
+              {
+                productId: "111yz",
+                productType: "coke",
+                priceInDollars: "3",
+                categoryId: "000yz"
+              },
+              {
+                productId: "112yz",
+                productType: "water",
+                priceInDollars: "1",
+                categoryId: "000yz"
+              },
+              {
+                productId: "112yz",
+                productType: "lays",
+                priceInDollars: "2",
+                categoryId: "001yz"
+              },
             ]
