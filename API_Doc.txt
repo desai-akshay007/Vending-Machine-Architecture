@@ -45,3 +45,53 @@
                 priceInDollars: "2"
               }
             ]
+            
+ ## POST
+ 1) To create a New Category say snacks: /setCategory
+   Request:
+           body:{
+                 payload:[
+                     categoryType:"snacks"
+                 ]
+           }
+           
+   Response: 
+            paylaod:[
+              {
+                categoryId: "000yz",
+                categoryType: "beverage"
+              },
+              {
+                categoryId: "001yz",
+                categoryType: "snacks"
+              }
+            ]
+            
+            
+## DELETE
+1) To delete an item ( dispensing action ): /deleteItem
+      Request:
+           body:{
+                 payload:[
+                     itemId:"123yz"
+                 ]
+           }
+           
+   Response: 
+             paylaod:[
+              {
+                itemId: "675vr",
+                productType: "water",
+                priceInDollars: "1"
+              },
+              {
+                itemId: "323dv",
+                productType: "coke",
+                priceInDollars: "2"
+              },
+              {
+                itemId: "098nb",
+                productType: "water",
+                priceInDollars: "1"
+              }
+            ]
