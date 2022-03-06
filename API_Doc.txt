@@ -59,19 +59,30 @@
    Request:
            body:{
                  payload:[
-                     productType:"fanta"
+                     productType:"fanta",
+                     categoryId: "000yz"
                  ]
            }
            
    Response: 
             paylaod:[
               {
-                categoryId: "000yz",
-                categoryType: "beverage"
+                productId: "111yz",
+                productType: "coke",
+                priceInDollars: "3",
+                categoryId: "000yz"
               },
               {
-                categoryId: "001yz",
-                categoryType: "snacks"
+                productId: "112yz",
+                productType: "water",
+                priceInDollars: "1",
+                categoryId: "000yz"
+              },
+              {
+                productId: "113yz",
+                productType: "fanta",
+                priceInDollars: "2",
+                categoryId: "000yz"
               }
             ]
  
