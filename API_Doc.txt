@@ -60,7 +60,8 @@
            body:{
                  payload:[
                      productType:"fanta",
-                     categoryId: "000yz"
+                     categoryId: "000yz",
+                     priceInDollars: "2",
                  ]
            }
            
