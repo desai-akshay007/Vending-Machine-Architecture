@@ -62,10 +62,12 @@
  1) To add a New Product Type say fanta: /addProductType
    Request:
            body:{
-                 payload:[
-                     productType:"fanta",
-                     categoryId: "000yz",
-                     priceInDollars: "2",
+                 [
+                    {
+                        productType:"fanta",
+                        categoryId: "000yz",
+                        priceInDollars: "2"
+                     }
                  ]
            }
            
@@ -93,11 +95,9 @@
  
  2) To create a New Category say snacks: /setCategory
    Request:
-           body:{
-                 payload:[
-                     categoryType:"snacks"
-                 ]
-           }
+           body:{ 
+                  categoryType:["snacks"]
+                }
            
    Response: 
             paylaod:[
@@ -113,9 +113,12 @@
             
             
 ## DELETE
-1) To delete an item ( dispensing action ): /deleteItem/?itemId=123yz
+1) To dispense an item ( delete action ): /dispenseItem/?itemId=123yz
       Request:
-           body:{}
+           body:{
+                  paymentType: "cash",
+                  balance: "3"
+                }
            
       Response: 
              paylaod:[
@@ -140,11 +143,9 @@
  1) To update product pricing: /updateProduct
    Request:
            body:{
-                 payload:[
-                     productType:"coke"
-                     priceInDollars:"3"
-                 ]
-           }
+                  productType:"coke"
+                  priceInDollars:"3"
+                }
            
    Response: 
             paylaod:[
