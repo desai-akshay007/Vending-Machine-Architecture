@@ -45,12 +45,16 @@
               {
                 itemId: "123yz",
                 productType: "coke",
-                priceInDollars: "2"
+                priceInDollars: "2",
+                categoryId: "000yz",
+                categoryType: "beverage"
               },
               {
                 id: "323dv",
                 productType: "coke",
-                priceInDollars: "2"
+                priceInDollars: "2",
+                categoryId: "000yz",
+                categoryType: "beverage"
               }
             ]
             
