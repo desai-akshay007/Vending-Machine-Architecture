@@ -36,7 +36,7 @@
                 categoryType: "beverage"
               }
             ]
-2) To get all product info of same type say "coke": /getInventory/<productType>
+2) To get all product info of same type say "coke": /getInventory/?productType=coke
    Request:
            body:{}
            
