@@ -5,58 +5,62 @@
    Request:
            body:{}
            
-   Response: 
-            paylaod:[
-              {
-                itemId: "123yz",
-                productType: "coke",
-                priceInDollars: "2",
-                categoryId: "000yz",
-                categoryType: "beverage"
-              },
-              {
-                itemId: "675vr",
-                productType: "water",
-                priceInDollars: "1",
-                categoryId: "000yz",
-                categoryType: "beverage"
-              },
-              {
-                itemId: "323dv",
-                productType: "coke",
-                priceInDollars: "2",
-                categoryId: "000yz",
-                categoryType: "beverage"
-              },
-              {
-                itemId: "098nb",
-                productType: "water",
-                priceInDollars: "1",
-                categoryId: "000yz",
-                categoryType: "beverage"
-              }
-            ]
+   Response: {
+               status: "OK",
+               paylaod:[
+                 {
+                   itemId: "123yz",
+                   productType: "coke",
+                   priceInDollars: "2",
+                   categoryId: "000yz",
+                   categoryType: "beverage"
+                 },
+                 {
+                   itemId: "675vr",
+                   productType: "water",
+                   priceInDollars: "1",
+                   categoryId: "000yz",
+                   categoryType: "beverage"
+                 },
+                 {
+                   itemId: "323dv",
+                   productType: "coke",
+                   priceInDollars: "2",
+                   categoryId: "000yz",
+                   categoryType: "beverage"
+                 },
+                 {
+                   itemId: "098nb",
+                   productType: "water",
+                   priceInDollars: "1",
+                   categoryId: "000yz",
+                   categoryType: "beverage"
+                 }
+               ]
+            }
 2) To get all product info of same type say "coke": /getInventory/?productType=coke
    Request:
            body:{}
            
-   Response: 
-            paylaod:[
-              {
-                itemId: "123yz",
-                productType: "coke",
-                priceInDollars: "2",
-                categoryId: "000yz",
-                categoryType: "beverage"
-              },
-              {
-                id: "323dv",
-                productType: "coke",
-                priceInDollars: "2",
-                categoryId: "000yz",
-                categoryType: "beverage"
-              }
-            ]
+   Response: {
+               status: "OK",
+               paylaod:[
+                 {
+                   itemId: "123yz",
+                   productType: "coke",
+                   priceInDollars: "2",
+                   categoryId: "000yz",
+                   categoryType: "beverage"
+                 },
+                 {
+                   id: "323dv",
+                   productType: "coke",
+                   priceInDollars: "2",
+                   categoryId: "000yz",
+                   categoryType: "beverage"
+                 }
+               ]
+            }
             
  ## POST
  1) To add a New Product Type say fanta: /addProductType
@@ -71,27 +75,30 @@
                  ]
            }
            
-   Response: 
-            paylaod:[
-              {
-                productId: "111yz",
-                productType: "coke",
-                priceInDollars: "3",
-                categoryId: "000yz"
-              },
-              {
-                productId: "112yz",
-                productType: "water",
-                priceInDollars: "1",
-                categoryId: "000yz"
-              },
-              {
-                productId: "113yz",
-                productType: "fanta",
-                priceInDollars: "2",
-                categoryId: "000yz"
-              }
-            ]
+   Response: { 
+               status: "OK",
+               message:"new product added",
+               paylaod:[
+                 {
+                   productId: "111yz",
+                   productType: "coke",
+                   priceInDollars: "3",
+                   categoryId: "000yz"
+                 },
+                 {
+                   productId: "112yz",
+                   productType: "water",
+                   priceInDollars: "1",
+                   categoryId: "000yz"
+                 },
+                 {
+                   productId: "113yz",
+                   productType: "fanta",
+                   priceInDollars: "2",
+                   categoryId: "000yz"
+                 }
+               ]
+            }
  
  2) To create a New Category say snacks: /setCategory
    Request:
@@ -99,17 +106,20 @@
                   categoryType:["snacks"]
                 }
            
-   Response: 
-            paylaod:[
-              {
-                categoryId: "000yz",
-                categoryType: "beverage"
-              },
-              {
-                categoryId: "001yz",
-                categoryType: "snacks"
-              }
-            ]
+   Response: {
+               status: "OK",
+               message:"new category added",
+               paylaod:[
+                 {
+                   categoryId: "000yz",
+                   categoryType: "beverage"
+                 },
+                 {
+                   categoryId: "001yz",
+                   categoryType: "snacks"
+                 }
+               ]
+             }
             
             
 ## DELETE
@@ -120,51 +130,56 @@
                   balance: "3"
                 }
            
-      Response: 
-             paylaod:[
-              {
-                itemId: "675vr",
-                productType: "water",
-                priceInDollars: "1"
-              },
-              {
-                itemId: "323dv",
-                productType: "coke",
-                priceInDollars: "2"
-              },
-              {
-                itemId: "098nb",
-                productType: "water",
-                priceInDollars: "1"
-              }
-            ]
-            
+      Response: {
+                   status: "OK",
+                   message:"please pick up your item",
+                   paylaod:[
+                    {
+                      itemId: "675vr",
+                      productType: "water",
+                      priceInDollars: "1"
+                    },
+                    {
+                      itemId: "323dv",
+                      productType: "coke",
+                      priceInDollars: "2"
+                    },
+                    {
+                      itemId: "098nb",
+                      productType: "water",
+                      priceInDollars: "1"
+                    }
+                  ]
+               }
  ## PUT
  1) To update product pricing: /updateProduct
    Request:
            body:{
-                  productType:"coke"
+                  productType:"coke",
                   priceInDollars:"3"
                 }
            
-   Response: 
-            paylaod:[
-              {
-                productId: "111yz",
-                productType: "coke",
-                priceInDollars: "3",
-                categoryId: "000yz"
-              },
-              {
-                productId: "112yz",
-                productType: "water",
-                priceInDollars: "1",
-                categoryId: "000yz"
-              },
-              {
-                productId: "112yz",
-                productType: "lays",
-                priceInDollars: "2",
-                categoryId: "001yz"
-              }
-            ]
+   Response: {     
+               status: "OK",
+               message:"product has been updated",
+               paylaod:[
+                 {
+                   productId: "111yz",
+                   productType: "coke",
+                   priceInDollars: "3",
+                   categoryId: "000yz"
+                 },
+                 {
+                   productId: "112yz",
+                   productType: "water",
+                   priceInDollars: "1",
+                   categoryId: "000yz"
+                 },
+                 {
+                   productId: "112yz",
+                   productType: "lays",
+                   priceInDollars: "2",
+                   categoryId: "001yz"
+                 }
+               ]
+            }
