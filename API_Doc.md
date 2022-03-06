@@ -28,7 +28,7 @@
                 priceInDollars: "1"
               }
             ]
-2) /getInventory/<productType>
+2) /getInventory/{productType}
    Request:
            body:{}
            
