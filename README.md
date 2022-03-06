@@ -1,5 +1,5 @@
 # Vending-Machine-Architecture
-## Objective:
+## Objective
    Vending Machine would Accept Payment and Dispense Product
 ## Requirements
    - Take Payment Input
