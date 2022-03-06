@@ -149,5 +149,5 @@
                 productType: "lays",
                 priceInDollars: "2",
                 categoryId: "001yz"
-              },
+              }
             ]
