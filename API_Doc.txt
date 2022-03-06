@@ -38,7 +38,7 @@
                  }
                ]
             }
-2) To get all product info of same type say "coke": /getInventory/?productType=coke
+2) To get inventory for products of same type say "coke": /getInventory/?productType=coke
    Request:
            body:{}
            
