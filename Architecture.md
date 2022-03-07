@@ -13,6 +13,7 @@
 - Interacts with the Client by responding to the request
 - Interacts with the internal DB (Add, Update, Delete, Fetch)
 - Interacts with the external Server over the internet
+- Interacts with Vending Machine hardware to Dispense Cash Balance & Dispense product 
 
 ### Vending Machine External Server Hardware
 - Interacts with the Vending Machine internal Server over the internet. (Add, Update, Delete, Fetch)
